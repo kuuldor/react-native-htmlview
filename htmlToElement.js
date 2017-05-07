@@ -66,6 +66,8 @@ export default function htmlToElement(rawHtml, opts, done) {
           case 'pre':
             linebreakBefore = LINE_BREAK;
             break;
+          case 'span':
+            linebreakBefore = '\u00a0\u00a0';
           case 'p':
             if (index < list.length - 1) {
               linebreakAfter = PARAGRAPH_BREAK;
